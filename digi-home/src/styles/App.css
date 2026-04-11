@@ -1,0 +1,17 @@
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 90px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.App {
+  min-height: 100vh;
+}

@@ -1,0 +1,349 @@
+.growth-hero {
+  position: relative;
+  /* min-height: 100vh; */
+  overflow: hidden;
+  background: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 5rem 1.25rem 5rem;
+  font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  color: #171923;
+}
+
+.growth-hero__lines {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  pointer-events: none;
+}
+
+.growth-hero__line {
+  border-left: 1px solid rgba(23, 25, 35, 0.05);
+}
+
+.growth-hero__content {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  max-width: 920px;
+  text-align: center;
+}
+
+.growth-hero__eyebrow {
+  margin: 0 0 18px;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  color: #7a7d87;
+}
+
+.growth-hero__headline-wrap {
+  display: flex;
+  justify-content: center;
+}
+
+.growth-hero__headline {
+  margin: 0;
+  line-height: 0.92;
+  font-weight: 800;
+  letter-spacing: -0.04em;
+}
+
+.growth-hero__headline-top {
+  display: inline-flex;
+  align-items: center;
+  gap: 14px;
+  font-size: clamp(34px, 5vw, 66px);
+  line-height: 1;
+  margin-bottom: 8px;
+}
+
+.growth-hero__arrow {
+  width: 46px;
+  height: 46px;
+  border-radius: 999px;
+  background: #6468ff;
+  color: #fff;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  box-shadow: 0 12px 30px rgba(100, 104, 255, 0.24);
+}
+
+.growth-hero__headline-main {
+  display: block;
+  font-size: clamp(72px, 14vw, 148px);
+  white-space: nowrap;
+}
+
+.growth-hero__toggle {
+  appearance: none;
+  border: 0;
+  background: transparent;
+  padding: 0;
+  margin: 0 0.03em;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  vertical-align: middle;
+}
+
+.growth-hero__toggle1 {
+  position: relative;
+  width: 1em;
+  height: 0.4em;
+
+  border-radius: 999px;
+  overflow: hidden;
+  padding: 0.03em;
+  background: linear-gradient(90deg, #cfcdfc, #6a63ff);
+  box-shadow:
+      inset 0 0 0 3px rgba(255, 255, 255, 0.5),
+      0 6px 16px rgba(106, 99, 255, 0.2);
+}
+
+.growth-hero__toggle1::before {
+  content: "";
+  position: absolute;
+  inset: 12px;
+  border-radius: 999px;
+  background: #ffffff;
+}
+
+.growth-hero__toggle-knob {
+  position: absolute;
+  top: 50%;
+  left: 4px;
+
+  width: calc(0.4em - 0.04em);
+  height: calc(0.4em - 0.04em);
+
+  transform: translateY(-50%);
+  border-radius: 50%;
+
+  background: #e5e5e5;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+
+  transition: all 0.3s ease;
+}
+
+.growth-hero__toggle.is-active .growth-hero__toggle1 {
+background: #22c55e; /* green */
+}
+
+.growth-hero__headline-main.is-green {
+  color: #22c55e;
+}
+
+.growth-hero__toggle.is-active .growth-hero__toggle-knob {
+  left: calc(100% - (0.4em - 0.04em) - 4px);
+}
+
+.growth-hero__headline-bottom {
+  display: inline-flex;
+  align-items: center;
+  font-size: clamp(28px, 5.6vw, 72px);
+  margin-top: 25px;
+}
+
+.growth-hero__cursor {
+  font-size: 0.85em;
+  transform: rotate(-25deg);
+  display: inline-block;
+}
+
+.growth-hero__text {
+  margin: 26px auto 0;
+  max-width: 560px;
+  font-size: 15px;
+  line-height: 1.65;
+  color: #6a6d76;
+}
+
+.growth-hero__actions {
+  margin-top: 26px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 14px;
+}
+
+.growth-hero__btn {
+  border: 0;
+  cursor: pointer;
+  font: inherit;
+}
+
+.growth-hero__btn--primary {
+  padding: 15px 28px;
+  border-radius: 999px;
+  background: linear-gradient(180deg, #ff9b4a 0%, #ff7a18 100%);
+  color: #fff;
+  font-weight: 700;
+  box-shadow: 0 12px 24px rgba(255, 122, 24, 0.25);
+}
+
+.growth-hero__link {
+  color: #171923;
+  font-weight: 700;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
+.growth-hero__brands {
+  margin-top: 72px;
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 20px;
+  align-items: center;
+  opacity: 0.28;
+}
+
+.growth-hero__brand {
+  font-size: clamp(22px, 2vw, 32px);
+  font-weight: 800;
+  color: #5f6470;
+  text-align: center;
+  letter-spacing: 0.02em;
+}
+
+.growth-hero__badge {
+  position: absolute;
+  right: 42px;
+  bottom: 44px;
+  width: 132px;
+  height: 132px;
+  border-radius: 50%;
+  z-index: 2;
+}
+
+.growth-hero__badge-text {
+  position: absolute;
+  inset: 0;
+  border: 1.5px solid rgba(23, 25, 35, 0.14);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: spinBadge 12s linear infinite;
+}
+
+.growth-hero__badge-text span {
+  position: absolute;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  color: #2d313b;
+}
+
+.growth-hero__badge-text span:nth-child(1) {
+  top: 16px;
+}
+
+.growth-hero__badge-text span:nth-child(2) {
+  right: 8px;
+  transform: rotate(90deg);
+}
+
+.growth-hero__badge-text span:nth-child(3) {
+  bottom: 16px;
+}
+
+.growth-hero__badge-center {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 34px;
+  color: #1f2430;
+}
+
+.growth-hero__floating {
+  position: absolute;
+  width: 3px;
+  border-radius: 999px;
+  background: linear-gradient(180deg, rgba(99, 102, 241, 0.8), rgba(255, 153, 0, 0.2));
+  z-index: 1;
+  animation: floatBar 5s ease-in-out infinite;
+}
+
+.growth-hero__floating--one {
+  left: 14%;
+  top: 46%;
+  height: 34px;
+}
+
+.growth-hero__floating--two {
+  right: 16%;
+  top: 34%;
+  height: 24px;
+  animation-delay: 0.8s;
+}
+
+.growth-hero__floating--three {
+  left: 24%;
+  bottom: 35%;
+  height: 40px;
+  animation-delay: 1.4s;
+}
+
+@keyframes spinBadge {
+  from {
+      transform: rotate(0deg);
+  }
+
+  to {
+      transform: rotate(360deg);
+  }
+}
+
+@keyframes floatBar {
+
+  0%,
+  100% {
+      transform: translateY(0);
+      opacity: 0.5;
+  }
+
+  50% {
+      transform: translateY(-14px);
+      opacity: 1;
+  }
+}
+
+@media (max-width: 900px) {
+
+  .growth-hero__brands {
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      row-gap: 24px;
+      margin-top: 54px;
+  }
+
+  .growth-hero__badge {
+      right: 18px;
+      bottom: 20px;
+      width: 104px;
+      height: 104px;
+  }
+
+}
+
+@media (max-width: 640px) {
+
+  .growth-hero__brands {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      row-gap: 18px;
+      margin-top: 40px;
+  }
+
+  .growth-hero__badge {
+      right: 10px;
+      bottom: 10px;
+      width: 80px;
+      height: 80px;
+  }
+}

@@ -1,0 +1,18 @@
+# dependencies
+node_modules/
+
+# env files
+.env
+server/.env
+digi-home/.env
+
+# build files
+dist/
+build/
+
+# logs
+npm-debug.log*
+
+# system files
+.DS_Store
+Thumbs.db

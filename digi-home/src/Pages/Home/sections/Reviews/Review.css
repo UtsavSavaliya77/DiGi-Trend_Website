@@ -1,0 +1,71 @@
+
+
+.hanging-header {
+  text-align: center;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  margin-bottom: -5px;
+}
+
+.hanging-title {
+  margin: 0;
+  font-size: 1.875rem;
+  font-weight: 700;
+  color: #1f2937;
+}
+
+.hanging-subtitle {
+  margin-top: 0.75rem;
+  margin-bottom: 0;
+  color: #6b7280;
+}
+
+.hanging-svg-wrap {
+  width: 100%;
+  overflow: hidden;
+  
+}
+
+.hanging-svg {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+  .review-text {
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    font-weight: 600;
+    color: #111;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    word-break: break-word;
+  }
+  
+  .review-text-mobile {
+    padding: 8px 10px;
+    font-size: 28px;
+    line-height: 1.45;
+  }
+  
+  .review-text-desktop {
+    /* padding: 4px 6px; */
+    font-size: 13px;
+    line-height: 1.3;
+  }
+
+@media (min-width: 640px) {
+
+  .hanging-title {
+    font-size: 3rem;
+  }
+}
+
+@media (min-width: 769px) {
+  .hanging-title {
+    font-size: 4rem;
+  }
+}

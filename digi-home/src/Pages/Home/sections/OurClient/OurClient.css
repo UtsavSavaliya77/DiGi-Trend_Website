@@ -1,0 +1,198 @@
+* {
+    box-sizing: border-box;
+  }
+  
+  .clients-section {
+    width: 100%;
+    background: white;
+    padding: 5rem 1.25rem 5rem;
+  }
+  
+  .clients-container {
+    width: 100%;
+    max-width: 1600px;
+    padding: 0 60px;
+  }
+  
+  .clients-header {
+    text-align: center;
+    margin-bottom: 38px;
+  }
+  
+  .clients-header h2 {
+    margin: 0;
+    font-size: 100px;
+    line-height: 0.95;
+    font-weight: 400;
+    color: #000;
+    font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  }
+  
+  .clients-header p {
+    margin: 16px 0 0;
+    font-size: 22px;
+    color: #504c4ae9;
+    font-weight: 500;
+    font-family: "Arial Narrow", Arial, sans-serif;
+  }
+  
+  .clients-grid {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    border-top: 1px solid #d8d8d8;
+    border-left: 1px solid #d8d8d8;
+    background: #f3f3f3;
+  }
+  
+  .client-card {
+    position: relative;
+    min-height: 200px;
+    border-right: 1px solid #d8d8d8;
+    border-bottom: 1px solid #d8d8d8;
+    background: #f3f3f3;
+    overflow: hidden;
+  }
+  
+  .client-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    min-height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .client-card::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: #ffffff;
+    opacity: 0;
+    transition: opacity 0.35s ease;
+  }
+  
+  .client-logo {
+    position: relative;
+    z-index: 2;
+    max-width: 110px;
+    max-height: 60px;
+    width: auto;
+    height: auto;
+    object-fit: contain;
+    filter: grayscale(100%);
+    opacity: 0.7;
+    transition: transform 0.35s ease, filter 0.35s ease, opacity 0.35s ease;
+  }
+  
+  .client-name {
+    position: absolute;
+    left: 50%;
+    bottom: 28px;
+    transform: translateX(-50%) translateY(10px);
+    z-index: 2;
+    font-size: 20px;
+    font-weight: 600;
+    color: #111;
+    opacity: 0;
+    white-space: nowrap;
+    transition: opacity 0.35s ease, transform 0.35s ease;
+    font-family: "Arial Narrow", Arial, sans-serif;
+    pointer-events: none;
+  }
+
+  .client-description {
+    position: absolute;
+    left: 50%;
+    bottom: 28px;
+    transform: translateX(-50%) translateY(30px);
+    z-index: 2;
+    font-size: 15px;
+    font-weight: 600;
+    color: #111;
+    opacity: 0;
+    white-space: nowrap;
+    transition: opacity 0.35s ease, transform 0.35s ease;
+    font-family: "Arial Narrow", Arial, sans-serif;
+    pointer-events: none;
+  }
+  
+  .client-card:hover::before {
+    opacity: 1;
+  }
+  
+  .client-card:hover .client-logo {
+    filter: grayscale(0%);
+    opacity: 1;
+    transform: scale(1.08);
+    transform: translateY(-14px);
+
+  }
+  
+  .client-card:hover .client-name {
+    opacity: 1;
+    transform: translateX(-50%) translateY(-18px);
+  }
+
+  .client-card:hover .client-description {
+    opacity: 1;
+    transform: translateX(-50%) translateY(20px);
+  }
+  
+  @media (max-width: 1200px) {
+    .clients-grid {
+      grid-template-columns: repeat(4, 1fr);
+    }
+  }
+  
+  @media (max-width: 900px) {
+    .clients-header h2 {
+      font-size: 58px;
+    }
+  
+    .clients-header p {
+      font-size: 16px;
+    }
+  
+    .clients-grid {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  
+    .client-card,
+    .client-card-inner {
+      min-height: 180px;
+    }
+  }
+  
+  @media (max-width: 600px) {
+   .clients-container{
+    padding: 0;
+   }  
+    .clients-header h2 {
+      font-size: 42px;
+    }
+  
+    .clients-header p {
+      font-size: 15px;
+      line-height: 1.5;
+    }
+  
+    .clients-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  
+    .client-card,
+    .client-card-inner {
+      min-height: 150px;
+    }
+  
+    .client-logo {
+      max-width: 90px;
+      max-height: 50px;
+    }
+  
+    .client-name {
+      font-size: 14px;
+      bottom: 20px;
+    }
+  }
